@@ -265,11 +265,28 @@
                       <p class="text-xs text-slate-500 dark:text-slate-400">Academic journey</p>
                     </div>
                   </div>
-                  <div class="relative pl-6 border-l-2 border-purple-300 dark:border-purple-800 space-y-2">
-                    <div class="absolute -left-[9px] top-1 w-4 h-4 rounded-full bg-purple-600 ring-4 ring-purple-100 dark:ring-purple-950"></div>
-                    <span class="px-2.5 py-1 rounded-full bg-purple-100 dark:bg-purple-900/60 text-purple-700 dark:text-purple-300 text-xs font-bold">2nd Year College Student</span>
-                    <h4 class="text-lg font-bold text-slate-800 dark:text-slate-100 pt-1">Bachelor of Science in Social Work</h4>
-                    <p class="text-sm font-medium text-slate-600 dark:text-slate-300">Dr. Aurelio Mendoza Memorial Colleges</p>
+                  <div class="relative pl-6 border-l-2 border-purple-300 dark:border-purple-800 space-y-6">
+                    <!-- College -->
+                    <div class="relative">
+                      <div class="absolute -left-[29px] top-1 w-4 h-4 rounded-full bg-purple-600 ring-4 ring-purple-100 dark:ring-purple-950"></div>
+                      <span class="px-2.5 py-1 rounded-full bg-purple-100 dark:bg-purple-900/60 text-purple-700 dark:text-purple-300 text-xs font-bold">College</span>
+                      <h4 class="text-lg font-bold text-slate-800 dark:text-slate-100 pt-1">Bachelor of Science in Social Work</h4>
+                      <p class="text-sm font-medium text-slate-600 dark:text-slate-300">Dr. Aurelio Mendoza Memorial Colleges</p>
+                      <p class="text-xs text-slate-500 dark:text-slate-400 mt-0.5">2nd Year College Student</p>
+                    </div>
+                    <!-- SHS -->
+                    <div class="relative">
+                      <div class="absolute -left-[29px] top-1 w-4 h-4 rounded-full bg-purple-400 ring-4 ring-purple-100 dark:ring-purple-950"></div>
+                      <span class="px-2.5 py-1 rounded-full bg-purple-100 dark:bg-purple-900/60 text-purple-700 dark:text-purple-300 text-xs font-bold">Senior High School</span>
+                      <h4 class="text-lg font-bold text-slate-800 dark:text-slate-100 pt-1">HUMSS Strand</h4>
+                      <p class="text-sm font-medium text-slate-600 dark:text-slate-300">Zamboanga Sibugay National High School (ZSNHS)</p>
+                    </div>
+                    <!-- Elementary -->
+                    <div class="relative">
+                      <div class="absolute -left-[29px] top-1 w-4 h-4 rounded-full bg-purple-300 ring-4 ring-purple-100 dark:ring-purple-950"></div>
+                      <span class="px-2.5 py-1 rounded-full bg-purple-100 dark:bg-purple-900/60 text-purple-700 dark:text-purple-300 text-xs font-bold">Elementary</span>
+                      <h4 class="text-lg font-bold text-slate-800 dark:text-slate-100 pt-1">Ipil Central Elementary School</h4>
+                    </div>
                   </div>
                 </div>
 
@@ -424,26 +441,50 @@
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
 
-          <div class="glass-card rounded-3xl overflow-hidden shadow-xl hover-lift flex flex-col group">
-            <div class="h-48 bg-gradient-to-tr from-blue-600 to-indigo-700 p-6 flex flex-col justify-between relative overflow-hidden">
-              <i class="fa-solid fa-book-open absolute -right-6 -bottom-6 text-9xl text-white/10 group-hover:scale-110 transition-transform duration-500"></i>
-              <span class="px-3 py-1 rounded-full bg-white/20 backdrop-blur text-white text-xs font-bold w-max">Academic Work</span>
-              <div>
-                <h3 class="text-2xl font-bold text-white mb-1">School Research & Presentations</h3>
-                <p class="text-blue-100 text-xs">Group Work & Academic Collaboration</p>
+            <!-- School Research & Presentations Card with Clickable Modal Image -->
+            <div class="glass-card rounded-3xl overflow-hidden shadow-xl hover-lift flex flex-col group">
+
+              <!-- Image Header Area (Clickable to open modal) -->
+              <div onclick="openModal('static/presentation.jpg', 'School Research & Presentations')"
+                   class="h-48 relative overflow-hidden cursor-pointer group">
+
+                <!-- Background Image -->
+                <img src="static/presentation.jpg" alt="School Research & Presentations"
+                     class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+
+                <!-- Overlay Gradient for Content Readability -->
+                <div class="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-900/40 to-transparent p-6 flex flex-col justify-between">
+
+                  <div class="flex items-center justify-between">
+                    <span class="px-3 py-1 rounded-full bg-blue-600/80 backdrop-blur text-white text-xs font-bold">Academic Work</span>
+                    <!-- Zoom Icon on Hover -->
+                    <div class="w-8 h-8 rounded-full bg-black/50 text-white flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
+                      <i class="fa-solid fa-magnifying-glass-plus text-xs"></i>
+                    </div>
+                  </div>
+
+                  <div>
+                    <h3 class="text-2xl font-bold text-white mb-1">School Research & Presentations</h3>
+                    <p class="text-blue-200 text-xs font-medium">Group Work & Academic Collaboration</p>
+                  </div>
+
+                </div>
               </div>
-            </div>
-            <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
-              <p class="text-slate-600 dark:text-slate-300 text-sm leading-relaxed">
-                I participate in school projects and group presentations that help me improve my communication, teamwork, and research skills.
-              </p>
-              <div class="pt-4 border-t border-slate-200 dark:border-slate-800 flex flex-wrap gap-2">
-                <span class="px-2.5 py-1 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 text-xs font-medium">Research</span>
-                <span class="px-2.5 py-1 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 text-xs font-medium">Teamwork</span>
-                <span class="px-2.5 py-1 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 text-xs font-medium">PowerPoint</span>
+
+              <!-- Card Body Content -->
+              <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
+                <p class="text-slate-600 dark:text-slate-300 text-sm leading-relaxed">
+                  I participate in school projects and group presentations that help me improve my communication, teamwork, and research skills.
+                </p>
+
+                <div class="pt-4 border-t border-slate-200 dark:border-slate-800 flex flex-wrap gap-2">
+                  <span class="px-2.5 py-1 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 text-xs font-medium">Research</span>
+                  <span class="px-2.5 py-1 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 text-xs font-medium">Teamwork</span>
+                  <span class="px-2.5 py-1 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 text-xs font-medium">PowerPoint</span>
+                </div>
               </div>
+
             </div>
-          </div>
 
           <div class="glass-card rounded-3xl overflow-hidden shadow-xl hover-lift flex flex-col group">
             <div class="h-48 bg-gradient-to-tr from-purple-600 to-brand-600 p-6 flex flex-col justify-between relative overflow-hidden">
@@ -495,48 +536,92 @@
     <section id="achievements" class="py-20 px-4 sm:px-6 lg:px-8">
       <div class="max-w-7xl mx-auto">
         <div class="text-center max-w-3xl mx-auto mb-16">
-          <h2 class="text-xs font-bold uppercase tracking-widest text-brand-600 dark:text-brand-400 mb-2">Honors & Awards</h2>
-          <p class="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white font-serif">Key Achievements</p>
+          <h2 class="text-xs font-bold uppercase tracking-widest text-brand-600 dark:text-brand-400 mb-2">Achievements</h2>
+          <p class="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white font-serif">Awards and Achievements</p>
           <div class="w-20 h-1.5 bg-gradient-to-r from-brand-500 to-purple-600 mx-auto rounded-full mt-4"></div>
         </div>
 
         <div class="max-w-4xl mx-auto space-y-6">
 
-          <div class="glass-card rounded-3xl p-6 sm:p-8 hover-lift border-l-8 border-l-amber-400 flex flex-col sm:flex-row items-center justify-between gap-6 relative overflow-hidden">
-            <div class="flex items-center gap-5">
-              <div class="w-16 h-16 sm:w-20 sm:h-20 rounded-2xl bg-gradient-to-tr from-amber-400 to-amber-200 text-slate-900 flex items-center justify-center text-3xl sm:text-4xl shadow-lg shrink-0">
-                <i class="fa-solid fa-trophy"></i>
-              </div>
-              <div>
-                <span class="px-3 py-1 rounded-full bg-amber-100 dark:bg-amber-950 text-amber-700 dark:text-amber-300 text-xs font-bold">1st Place / Overall Winner</span>
-                <h3 class="text-xl sm:text-2xl font-bold text-slate-900 dark:text-white mt-1">Champion – Solo Singing</h3>
-                <p class="text-sm text-slate-600 dark:text-slate-400">Demonstrated vocal mastery and stage presence in solo competition.</p>
+
+
+        <!-- Achievement Card with Clickable Modal Image -->
+        <div class="glass-card rounded-3xl p-6 sm:p-8 hover-lift border-l-8 border-l-amber-400 flex flex-col sm:flex-row items-center justify-between gap-6 relative overflow-hidden">
+
+          <div class="flex items-center gap-5 w-full sm:w-auto">
+            <!-- Clickable Image Thumbnail -->
+            <div onclick="openModal('static/solo.jpg', 'Champion – Solo Singing')"
+                 class="relative group w-16 h-16 sm:w-20 sm:h-20 rounded-2xl overflow-hidden shadow-lg shrink-0 cursor-pointer border-2 border-amber-400/50">
+              <img src="static/solo.jpg" alt="Champion Solo Singing" class="w-full h-full object-cover group-hover:scale-110 transition duration-300">
+              <!-- Hover Overlay Icon -->
+              <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center text-white text-lg">
+                <i class="fa-solid fa-magnifying-glass-plus"></i>
               </div>
             </div>
-            <div class="shrink-0 text-center sm:text-right w-full sm:w-auto">
-              <span class="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-amber-50 dark:bg-amber-900/30 text-amber-700 dark:text-amber-300 text-sm font-bold">
-                <i class="fa-solid fa-crown text-amber-500"></i> Gold Award
-              </span>
+
+            <div>
+              <span class="px-3 py-1 rounded-full bg-amber-100 dark:bg-amber-950 text-amber-700 dark:text-amber-300 text-xs font-bold">1st Place / Overall Winner</span>
+              <h3 class="text-xl sm:text-2xl font-bold text-slate-900 dark:text-white mt-1">Champion – Solo Singing</h3>
+              <p class="text-sm text-slate-600 dark:text-slate-400">Demonstrated vocal mastery and stage presence in solo competition.</p>
             </div>
           </div>
 
-          <div class="glass-card rounded-3xl p-6 sm:p-8 hover-lift border-l-8 border-l-brand-500 flex flex-col sm:flex-row items-center justify-between gap-6 relative overflow-hidden">
-            <div class="flex items-center gap-5">
-              <div class="w-16 h-16 sm:w-20 sm:h-20 rounded-2xl bg-gradient-to-tr from-brand-500 to-purple-500 text-white flex items-center justify-center text-3xl sm:text-4xl shadow-lg shrink-0">
-                <i class="fa-solid fa-medal"></i>
-              </div>
-              <div>
-                <span class="px-3 py-1 rounded-full bg-brand-100 dark:bg-brand-950 text-brand-700 dark:text-brand-300 text-xs font-bold">Intramurals Competition</span>
-                <h3 class="text-xl sm:text-2xl font-bold text-slate-900 dark:text-white mt-1">1st Place – Duet Singing</h3>
-                <p class="text-sm text-slate-600 dark:text-slate-400">Awarded first place in duet singing through harmonious teamwork and dedication.</p>
+          <div class="shrink-0 text-center sm:text-right w-full sm:w-auto">
+            <span class="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-amber-50 dark:bg-amber-900/30 text-amber-700 dark:text-amber-300 text-sm font-bold">
+              <i class="fa-solid fa-crown text-amber-500"></i> Gold Award
+            </span>
+          </div>
+
+        </div>
+
+        <!-- Modal Container (Place this once before the closing </body> tag) -->
+        <div id="imageModal" onclick="closeModal()" class="fixed inset-0 z-50 hidden bg-black/80 backdrop-blur-sm flex items-center justify-center p-4 transition-opacity duration-300">
+          <div onclick="event.stopPropagation()" class="relative max-w-3xl w-full bg-slate-900 rounded-2xl overflow-hidden shadow-2xl border border-slate-700 transform transition-all scale-95 opacity-0" id="modalContent">
+
+            <!-- Close Button -->
+            <button onclick="closeModal()" class="absolute top-4 right-4 z-10 w-10 h-10 bg-black/60 hover:bg-black/90 text-white rounded-full flex items-center justify-center transition">
+              <i class="fa-solid fa-xmark text-xl"></i>
+            </button>
+
+            <!-- Modal Image -->
+            <img id="modalImg" src="" alt="" class="w-full h-auto max-h-[80vh] object-contain bg-black/40">
+
+            <!-- Modal Caption -->
+            <div class="p-4 bg-slate-900/90 text-center">
+              <p id="modalCaption" class="text-lg font-semibold text-white"></p>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- 1st Place - Duet Singing Card with Clickable Modal Image -->
+        <div class="glass-card rounded-3xl p-6 sm:p-8 hover-lift border-l-8 border-l-brand-500 flex flex-col sm:flex-row items-center justify-between gap-6 relative overflow-hidden">
+
+          <div class="flex items-center gap-5 w-full sm:w-auto">
+            <!-- Clickable Image Thumbnail -->
+            <div onclick="openModal('static/duet.jpg', '1st Place – Duet Singing')"
+                 class="relative group w-16 h-16 sm:w-20 sm:h-20 rounded-2xl overflow-hidden shadow-lg shrink-0 cursor-pointer border-2 border-brand-500/50">
+              <img src="static/duet.jpg" alt="1st Place Duet Singing" class="w-full h-full object-cover group-hover:scale-110 transition duration-300">
+              <!-- Hover Overlay Icon -->
+              <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center text-white text-lg">
+                <i class="fa-solid fa-magnifying-glass-plus"></i>
               </div>
             </div>
-            <div class="shrink-0 text-center sm:text-right w-full sm:w-auto">
-              <span class="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-brand-50 dark:bg-brand-900/30 text-brand-700 dark:text-brand-300 text-sm font-bold">
-                <i class="fa-solid fa-star text-brand-500"></i> Winner
-              </span>
+
+            <div>
+              <span class="px-3 py-1 rounded-full bg-brand-100 dark:bg-brand-950 text-brand-700 dark:text-brand-300 text-xs font-bold">Intramurals Competition</span>
+              <h3 class="text-xl sm:text-2xl font-bold text-slate-900 dark:text-white mt-1">1st Place – Duet Singing</h3>
+              <p class="text-sm text-slate-600 dark:text-slate-400">Awarded first place in duet singing through harmonious teamwork and dedication.</p>
             </div>
           </div>
+
+          <div class="shrink-0 text-center sm:text-right w-full sm:w-auto">
+            <span class="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-brand-50 dark:bg-brand-900/30 text-brand-700 dark:text-brand-300 text-sm font-bold">
+              <i class="fa-solid fa-star text-brand-500"></i> Winner
+            </span>
+          </div>
+
+        </div>
 
           <div class="glass-card rounded-3xl p-6 sm:p-8 hover-lift border-l-8 border-l-purple-500 flex flex-col sm:flex-row items-center justify-between gap-6 relative overflow-hidden">
             <div class="flex items-center gap-5">
@@ -552,6 +637,55 @@
             <div class="shrink-0 text-center sm:text-right w-full sm:w-auto">
               <span class="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-purple-50 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 text-sm font-bold">
                 <i class="fa-solid fa-ribbon text-purple-500"></i> Silver Award
+              </span>
+            </div>
+          </div>
+
+          <!-- NEW: With Honors (High School) -->
+          <!-- High School With Honors Card with Clickable Modal Image -->
+          <div class="glass-card rounded-3xl p-6 sm:p-8 hover-lift border-l-8 border-l-emerald-400 flex flex-col sm:flex-row items-center justify-between gap-6 relative overflow-hidden">
+
+            <div class="flex items-center gap-5 w-full sm:w-auto">
+              <!-- Clickable Image Thumbnail -->
+              <div onclick="openModal('static/highhonor.jpg', 'High School – With Honors')"
+                   class="relative group w-16 h-16 sm:w-20 sm:h-20 rounded-2xl overflow-hidden shadow-lg shrink-0 cursor-pointer border-2 border-emerald-400/50">
+                <img src="static/highhonor.jpg" alt="High School With Honors" class="w-full h-full object-cover group-hover:scale-110 transition duration-300">
+                <!-- Hover Overlay Icon -->
+                <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center text-white text-lg">
+                  <i class="fa-solid fa-magnifying-glass-plus"></i>
+                </div>
+              </div>
+
+              <div>
+                <span class="px-3 py-1 rounded-full bg-emerald-100 dark:bg-emerald-950 text-emerald-700 dark:text-emerald-300 text-xs font-bold">High School</span>
+                <h3 class="text-xl sm:text-2xl font-bold text-slate-900 dark:text-white mt-1">With Honors</h3>
+                <p class="text-sm text-slate-600 dark:text-slate-400">Graduated with academic distinction during junior high school.</p>
+              </div>
+            </div>
+
+            <div class="shrink-0 text-center sm:text-right w-full sm:w-auto">
+              <span class="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-emerald-50 dark:bg-emerald-900/30 text-emerald-700 dark:text-emerald-300 text-sm font-bold">
+                <i class="fa-solid fa-star text-emerald-500"></i> Academic Honors
+              </span>
+            </div>
+
+          </div>
+
+          <!-- NEW: With Honors (SHS) -->
+          <div class="glass-card rounded-3xl p-6 sm:p-8 hover-lift border-l-8 border-l-teal-400 flex flex-col sm:flex-row items-center justify-between gap-6 relative overflow-hidden">
+            <div class="flex items-center gap-5">
+              <div class="w-16 h-16 sm:w-20 sm:h-20 rounded-2xl bg-gradient-to-tr from-teal-400 to-teal-200 text-slate-900 flex items-center justify-center text-3xl sm:text-4xl shadow-lg shrink-0">
+                <i class="fa-solid fa-graduation-cap"></i>
+              </div>
+              <div>
+                <span class="px-3 py-1 rounded-full bg-teal-100 dark:bg-teal-950 text-teal-700 dark:text-teal-300 text-xs font-bold">Senior High School</span>
+                <h3 class="text-xl sm:text-2xl font-bold text-slate-900 dark:text-white mt-1">With Honors</h3>
+                <p class="text-sm text-slate-600 dark:text-slate-400">Graduated with honors in the HUMSS strand.</p>
+              </div>
+            </div>
+            <div class="shrink-0 text-center sm:text-right w-full sm:w-auto">
+              <span class="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-teal-50 dark:bg-teal-900/30 text-teal-700 dark:text-teal-300 text-sm font-bold">
+                <i class="fa-solid fa-star text-teal-500"></i> Academic Honors
               </span>
             </div>
           </div>
@@ -715,6 +849,46 @@
       link.addEventListener('click', () => {
         mobileMenu?.classList.add('hidden');
       });
+    });
+  </script>
+  <script>
+    function openModal(imageSrc, captionText) {
+      const modal = document.getElementById('imageModal');
+      const modalImg = document.getElementById('modalImg');
+      const modalCaption = document.getElementById('modalCaption');
+      const modalContent = document.getElementById('modalContent');
+
+      modalImg.src = imageSrc;
+      modalCaption.textContent = captionText;
+
+      // Show modal overlay
+      modal.classList.remove('hidden');
+
+      // Smooth transition in
+      setTimeout(() => {
+        modalContent.classList.remove('scale-95', 'opacity-0');
+        modalContent.classList.add('scale-100', 'opacity-100');
+      }, 10);
+    }
+
+    function closeModal() {
+      const modal = document.getElementById('imageModal');
+      const modalContent = document.getElementById('modalContent');
+
+      // Smooth transition out
+      modalContent.classList.remove('scale-100', 'opacity-100');
+      modalContent.classList.add('scale-95', 'opacity-0');
+
+      setTimeout(() => {
+        modal.classList.add('hidden');
+      }, 200);
+    }
+
+    // Close modal when pressing ESC key
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape') {
+        closeModal();
+      }
     });
   </script>
 </body>
